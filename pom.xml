@@ -20,6 +20,26 @@
         <scope>system</scope>
         <systemPath>${project.basedir}/libs/DreamNetworkV2-1.9.3-SNAPSHOT-api.jar</systemPath>
     </dependency>
+    <dependency>
+        <groupId>be.alexandre01.dreamnetwork</groupId>
+        <artifactId>DreamNetwork-Plugin-API</artifactId>
+        <version>1.4.0-SNAPSHOT</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/libs/DreamNetwork-Plugin-api.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.22</version>
+        <scope>compile</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.spigotmc</groupId>
+        <artifactId>spigot</artifactId>
+        <version>1.8.8-R0.1-SNAPSHOT</version>
+        <scope>provided</scope>
+    </dependency>
+
 </dependencies>
 
 
