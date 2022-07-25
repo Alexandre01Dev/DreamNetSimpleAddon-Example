@@ -5,6 +5,7 @@ import be.alexandre01.addon.commands.TestCommand;
 import be.alexandre01.addon.request.CustomType;
 import be.alexandre01.addon.request.RequestResponse;
 import be.alexandre01.dreamnetwork.api.DNClientAPI;
+import be.alexandre01.dreamnetwork.api.addons.Addon;
 import be.alexandre01.dreamnetwork.api.addons.DreamExtension;
 import be.alexandre01.dreamnetwork.api.connection.core.channels.AChannelPacket;
 import be.alexandre01.dreamnetwork.api.connection.core.channels.IDNChannel;
@@ -14,10 +15,16 @@ import be.alexandre01.dreamnetwork.api.service.*;
 import be.alexandre01.dreamnetwork.client.console.Console;
 import be.alexandre01.dreamnetwork.client.utils.messages.Message;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class Main extends DreamExtension {
+
+    public Main(Addon addon){
+        super(addon);
+    }
     @Override
     public void onLoad() {
-        System.out.println("Loaded");
         registerRequestType(new CustomType());
         registerPluginToServers(this);
     }
@@ -29,10 +36,11 @@ public class Main extends DreamExtension {
         System.out.println("Start");
 
         DNClientAPI dnClientAPI = DNClientAPI.getInstance(); // GET API
-        dnClientAPI.getCoreHandler().getResponses().add(new RequestResponse()); // ADD RESPONSE
-
-
+        dnClientAPI.getEventsFactory().registerListener(new CustomListener());
         dnClientAPI.getCommandReader().getCommands().addCommands(new TestCommand("test")); //ADD COMMAND
+
+
+
     }
 
     @Override

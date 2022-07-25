@@ -1,6 +1,7 @@
 package be.alexandre01.spigot;
 
 
+import be.alexandre01.dnplugin.api.objects.server.DNServer;
 import be.alexandre01.dnplugin.plugins.spigot.api.DNSpigotAPI;
 import be.alexandre01.dnplugin.plugins.spigot.api.events.server.ServerAttachedEvent;
 import org.bukkit.event.EventHandler;

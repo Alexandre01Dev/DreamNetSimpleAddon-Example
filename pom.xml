@@ -18,7 +18,7 @@
         <artifactId>DreamNetwork-API</artifactId>
         <version>1.9.3-SNAPSHOT</version>
         <scope>system</scope>
-        <systemPath>${project.basedir}/libs/DreamNetworkV2-1.9.3-SNAPSHOT-api.jar</systemPath>
+        <systemPath>${project.basedir}/libs/DreamNetworkV2-1.10.0-SNAPSHOT-prod.jar</systemPath>
     </dependency>
     <dependency>
         <groupId>be.alexandre01.dreamnetwork</groupId>
