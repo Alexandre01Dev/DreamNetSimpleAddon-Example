@@ -39,8 +39,7 @@ public class Main extends DreamExtension {
         dnClientAPI.getEventsFactory().registerListener(new CustomListener());
         dnClientAPI.getCommandReader().getCommands().addCommands(new TestCommand("test")); //ADD COMMAND
 
-
-
+        getDnClientAPI().getGlobalResponses().add(new CustomResponse());
     }
 
     @Override

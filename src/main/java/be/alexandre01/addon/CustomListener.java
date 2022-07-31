@@ -23,7 +23,7 @@ public class CustomListener implements Listener {
 
     @EventCatcher
     public void onServiceStart(CoreServiceStopEvent e){
-        if(e.getService().getJvmExecutor().getName().equals("Lobby")){
+       /* if(e.getService().getJvmExecutor().getName().equals("Lobby")){
             new Timer().scheduleAtFixedRate(new TimerTask() {
                 @Override
                 public void run() {
@@ -31,6 +31,6 @@ public class CustomListener implements Listener {
                     cancel();
                 }
             },1000,1000);
-        }
+        }*/
     }
 }
