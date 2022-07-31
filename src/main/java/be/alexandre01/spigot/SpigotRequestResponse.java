@@ -26,6 +26,7 @@ public class SpigotRequestResponse extends ClientResponse {
                 System.out.println("J'ai reçu le custom header, youpi");
                 System.out.println("I'm sus i think: "+ message.getString("QUESTION"));
                 if(message.getString("QUESTION").equals("ARE YOU SUS ?")){
+                    message.remove("DN-QUESTION");
                     message.set("SUSSY","AMOGUS!");
                     if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
                         try {
